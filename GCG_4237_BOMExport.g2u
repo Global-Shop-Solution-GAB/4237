@@ -1,0 +1,1107 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form_File..create
+Gui.SS_Form_File..caption("File Selection")
+Gui.SS_Form_File..size(5365,1725)
+Gui.SS_Form_File..position(0,0)
+Gui.SS_Form_File..alwaysontop(False)
+Gui.SS_Form_File..fontname("Arial")
+Gui.SS_Form_File..fontsize(8)
+Gui.SS_Form_File..forecolor(0)
+Gui.SS_Form_File..BackColor(-2147483633)
+Gui.SS_Form_File..controlbox(True)
+Gui.SS_Form_File..maxbutton(False)
+Gui.SS_Form_File..minbutton(False)
+Gui.SS_Form_File..mousepointer(0)
+Gui.SS_Form_File..moveable(True)
+Gui.SS_Form_File..sizeable(False)
+Gui.SS_Form_File..ShowInTaskBar(True)
+Gui.SS_Form_File..titlebar(True)
+Gui.SS_Form_File..MinX(0)
+Gui.SS_Form_File..MinY(0)
+Gui.SS_Form_File..Event(UnLoad,SS_Form_File_UnLoad)
+Gui.SS_Form_File.lbl_txt_FileSelection.create(label,"File Name",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form_File.lbl_txt_FileSelection.LabelStretch(True)
+Gui.SS_Form_File.txt_FileSelection.create(textbox,"",True,4500,300,1,105,330,True,0,Arial,8,16777215,1)
+Gui.SS_Form_File.txt_FileSelection.tabstop(True)
+Gui.SS_Form_File.txt_FileSelection.tabindex(1)
+Gui.SS_Form_File.cmd_txt_FileSelection.create(button)
+Gui.SS_Form_File.cmd_txt_FileSelection.Caption("^")
+Gui.SS_Form_File.cmd_txt_FileSelection.visible(True)
+Gui.SS_Form_File.cmd_txt_FileSelection.size(330,330)
+Gui.SS_Form_File.cmd_txt_FileSelection.position(4680,330)
+Gui.SS_Form_File.cmd_txt_FileSelection.enabled(True)
+Gui.SS_Form_File.cmd_txt_FileSelection.fontname("Arial")
+Gui.SS_Form_File.cmd_txt_FileSelection.fontsize(8)
+Gui.SS_Form_File.cmd_txt_FileSelection.tabstop(True)
+Gui.SS_Form_File.cmd_txt_FileSelection.tabindex(2)
+Gui.SS_Form_File.cmd_txt_FileSelection.Event(Click,cmd_txt_FileSelection_Click)
+Gui.SS_Form_File.cmdFileOK.Create(Button)
+Gui.SS_Form_File.cmdFileOK.Size(855,375)
+Gui.SS_Form_File.cmdFileOK.Position(105,705)
+Gui.SS_Form_File.cmdFileOK.Caption("OK")
+Gui.SS_Form_File.cmdFileOK.Event(Click,cmdFileOK_Click)
+Gui.Form..Create
+Gui.Form..Caption("BOM Upload")
+Gui.Form..Size(23775,12405)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..BackColor(-2147483633)
+Gui.Form..MousePointer(0)
+Gui.Form..Sizeable(False)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form..MaxButton(False)
+Gui.Form..MinButton(False)
+Gui.Form.frame1.Create(Frame)
+Gui.Form.frame1.Size(11445,11475)
+Gui.Form.frame1.Position(300,240)
+Gui.Form.GsGridControlImport.Create(GsGridControl)
+Gui.Form.GsGridControlImport.Size(10950,9315)
+Gui.Form.GsGridControlImport.Position(285,1215)
+Gui.Form.GsGridControlImport.Parent("frame1")
+Gui.Form.GsGridControlImport.Enabled(True)
+Gui.Form.cmdUpload.Create(Button)
+Gui.Form.cmdUpload.Size(1545,555)
+Gui.Form.cmdUpload.Position(285,10710)
+Gui.Form.cmdUpload.Caption("Upload")
+Gui.Form.cmdUpload.FontStyle(True,False,False,False,False)
+Gui.Form.cmdUpload.Parent("frame1")
+Gui.Form.cmdUpload.Event(Click,cmdUpload_Click)
+Gui.Form.cmdUpload.Enabled(True)
+Gui.Form.cmdCreate.Create(Button)
+Gui.Form.cmdCreate.Size(1545,555)
+Gui.Form.cmdCreate.Position(9660,10710)
+Gui.Form.cmdCreate.Caption("Create Parts")
+Gui.Form.cmdCreate.FontStyle(True,False,False,False,False)
+Gui.Form.cmdCreate.Event(Click,cmdCreate_Click)
+Gui.Form.cmdCreate.Parent("frame1")
+Gui.Form.cmdCreate.Enabled(False)
+Gui.Form.lblPN1.Create(Label,"Parent Number",True,1305,255,0,255,540,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblPN1.Parent("frame1")
+Gui.Form.lblRev1.Create(Label,"Rev",True,630,255,0,2580,540,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblRev1.Parent("frame1")
+Gui.Form.lblDesc1.Create(Label,"Description",True,1935,255,0,3420,540,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblDesc1.Parent("frame1")
+Gui.Form.txtPN1.Create(TextBox,"",True,2160,300,0,270,750,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPN1.Parent("frame1")
+Gui.Form.txtPN1.Locked(True)
+Gui.Form.txtRev1.Create(TextBox,"",True,660,300,0,2565,750,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRev1.Parent("frame1")
+Gui.Form.txtRev1.Locked(True)
+Gui.Form.txtDesc1.Create(TextBox,"",True,7800,300,0,3420,750,True,0,"Arial",8,-2147483643,1)
+Gui.Form.txtDesc1.Parent("frame1")
+Gui.Form.txtDesc1.Locked(True)
+Gui.Form.cmdRefresh.Create(Button)
+Gui.Form.cmdRefresh.Size(1410,540)
+Gui.Form.cmdRefresh.Position(2625,10725)
+Gui.Form.cmdRefresh.Parent("frame1")
+Gui.Form.cmdRefresh.Caption("Refresh")
+Gui.Form.cmdRefresh.Enabled(False)
+Gui.Form.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.Form.cmdRefresh.Visible(False)
+Gui.Form.frame2.Create(Frame)
+Gui.Form.frame2.Size(11445,11490)
+Gui.Form.frame2.Position(11910,255)
+Gui.Form.GsGridControlMatch.Create(GsGridControl)
+Gui.Form.GsGridControlMatch.Size(10950,9285)
+Gui.Form.GsGridControlMatch.Position(300,1215)
+Gui.Form.GsGridControlMatch.Parent("frame2")
+Gui.Form.GsGridControlMatch.Enabled(True)
+Gui.Form.lblred.Create(Label,"Red - Different Field Values Found In GSS",True,4500,255,0,345,10815,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblred.Parent("frame2")
+Gui.Form.lblyellow.Create(Label,"Yellow - Parts Not In GSS",True,2340,255,0,345,11190,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblyellow.Parent("frame2")
+Gui.Form.txtDesc2.Create(TextBox,"",False,2970,300,0,3510,345,False,0,"Arial",8,-2147483643,1)
+Gui.Form.txtDesc2.Parent("frame2")
+Gui.Form.lblDesc2.Create(Label,"Description",False,1935,255,0,3480,135,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblDesc2.Parent("frame2")
+Gui.Form.txtRev2.Create(TextBox,"",False,660,300,0,2610,345,False,0,"Arial",8,-2147483643,1)
+Gui.Form.txtRev2.Parent("frame2")
+Gui.Form.lblRev2.Create(Label,"Rev",False,630,255,0,2625,135,True,0,"Arial",8,-2147483633,0)
+Gui.Form.lblRev2.Parent("frame2")
+Gui.Form.txtPN2.Create(TextBox,"",False,2160,300,0,315,345,False,0,"Arial",8,-2147483643,1)
+Gui.Form.txtPN2.Parent("frame2")
+Gui.Form.lblPN2.Create(Label,"Global Shop Bill of Material",True,5370,255,0,315,915,True,0,"Arial Rounded MT Bold",8,-2147483633,0)
+Gui.Form.lblPN2.Parent("frame2")
+Gui.Form.lbl1.Create(Label,"Global Shop Bill of Material",True,5640,255,0,12270,1185,True,0,"Arial Rounded MT Bold",9,-2147483633,0)
+Gui.Form.lbl1.Parent("frame2")
+Gui.Form.lbl2.Create(Label,"Global Shop Bill of Material",True,5430,255,0,12285,1965,True,0,"Arial Rounded MT Bold",8,-2147483633,0)
+Gui.Form.lbl2.Parent("frame2")
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Global.sParent.Declare(String)
+V.Global.bPartBatch.Declare(Boolean)
+V.Global.bParts.Declare(Boolean)
+V.Global.bUpload.Declare(Boolean)
+V.Global.bExist.Declare(Boolean)
+
+'opening connection
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+'call sub to create datatable that will be populated by the import
+Gui.SS_Form_File..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form_file_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.Form_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("createdatatable_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Function.Data.DataView.Close("Import1", "GRID1")
+F.Data.DataTable.Close("Import1")
+'closing connection and ending program
+F.ODBC.Connection!con.Close
+Function.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("createdatatable_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.SS_Form_File_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form_File_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'closing connection and ending program
+F.ODBC.Connection!con.Close
+Function.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form_File_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+Program.Sub.SS_Form_File_UnLoad.End
+
+Program.Sub.cmd_txt_FileSelection_Click.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form_File_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+Variable.Local.sFile.Declare(String)
+Variable.Local.sDir.Declare(String)
+
+F.Intrinsic.String.Build("{0}\Select File",V.Caller.FilesDir,V.Local.sDir)
+Function.Intrinsic.UI.ShowOpenFileDialog("","csv|xls|xlsx",V.Local.sDir,V.Local.sFile)
+Function.Intrinsic.Control.If(V.Local.sFile,<>,"***CANCEL***")
+	Gui.SS_Form_File.txt_FileSelection.Text(V.Local.sFile)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form_File_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmd_txt_FileSelection_Click.End
+
+Program.Sub.cmdUpload_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdUpload_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sparam.Declare(String)
+V.Local.ssql.Declare(String)
+V.Local.iFor.Declare(long)
+V.Local.sPart.Declare(String)
+V.Local.sPartString.Declare(String)
+
+F.Intrinsic.UI.InvokeWaitDialog("Uploading BOM")
+
+F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+	V.Local.sPart.set(V.datatable.Import1(v.Local.iFor).GSS_PART_NUMBER.fieldval)
+	f.Intrinsic.Control.If(V.Local.sPartString,<>,"")
+		f.Intrinsic.String.Build("{0},'{1}'",V.Local.sPartString,V.Local.sPart,V.Local.sPartString)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("'{0}'",V.Local.sPart,V.Local.sPartString)
+	f.Intrinsic.Control.EndIf 
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+f.Intrinsic.String.Build("Delete from BOM_Eng where part IN ({0})",V.Local.sPartString,V.Local.ssql)
+f.ODBC.Connection!con.Execute(V.Local.ssql)
+
+f.Intrinsic.String.Build("Delete from bom_mstr where parent IN ({0})",V.Local.sPartString,V.Local.ssql)
+F.ODBC.Connection!con.execute(V.Local.ssql)
+
+F.Intrinsic.String.Concat(V.Caller.CompanyCode,"1","UPLBOMC",V.Local.sparam)
+F.Intrinsic.Task.LaunchGSSSync("UPL001A","-c",V.Local.sparam)
+
+gui.Form..Visible(false)
+
+f.Intrinsic.Control.CallSub(explodebom)
+
+F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+	'update cost for BOM
+	f.Intrinsic.Control.If(V.datatable.Import1(v.Local.iFor).GSS_Cost.fieldvalfloat,>,0)
+		f.Intrinsic.String.Build("update BOM_MSTR set cost = {0} where parent = '{1}' and part = '{2}'",V.datatable.Import1(v.Local.iFor).GSS_Cost.fieldvalfloat,V.datatable.Import1(v.Local.iFor).GSS_Parent.fieldval,V.datatable.Import1(v.Local.iFor).GSS_PART_NUMBER.fieldval,V.Local.ssql)
+		f.ODBC.Connection!con.Execute(v.Local.ssql)
+	f.Intrinsic.Control.endif
+	
+	Gui.Form.GsGridControlImport.SetRowAppearance("GRID1",v.Local.iFor, "backcolor", "white")
+	f.Intrinsic.Control.If(V.Global.bExist,=,True)
+		gui.Form.GsGridControlMatch.SetRowAppearance("GRID2",v.Local.iFor,"backcolor","white")
+	f.Intrinsic.Control.EndIf 
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+f.Intrinsic.Control.CallSub(Compare)
+
+F.Intrinsic.Control.If(v.DataTable.GRID2.Exists,=,True)
+	Function.Data.DataView.Close("GRID2", "GRID2")
+	F.Data.DataTable.Close("GRID2")
+Function.Intrinsic.Control.EndIf
+
+gui.Form..Visible(true)
+F.Intrinsic.UI.CloseWaitDialog 
+
+f.Intrinsic.UI.Msgbox("BOM Uploaded successfully")
+gui.Form.cmdUpload.Enabled(False)
+		
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdUpload_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdUpload_Click.End
+
+Program.Sub.cmdCreate_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdCreate_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.iFor.Declare(long)
+
+Function.Intrinsic.Control.If(V.Global.bPartBatch,=,True)
+	F.Intrinsic.UI.InvokeWaitDialog("Creating Parts")
+	gui.Form..Visible(false)
+	f.Global.Inventory.PostPartBatch
+
+	f.Intrinsic.Control.CallSub(updateinv)
+	f.Intrinsic.Control.CallSub(Compare)
+	V.Global.bPartBatch.Set(false)
+	gui.Form.cmdCreate.Enabled(False)
+
+	F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+		Gui.Form.GsGridControlImport.SetRowAppearance("GRID1",v.Local.iFor, "backcolor", "white")
+		f.Intrinsic.Control.If(V.Global.bExist,=,True)
+			gui.Form.GsGridControlMatch.SetRowAppearance("GRID2",v.Local.iFor,"backcolor","white")
+		f.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iFor)
+	f.Intrinsic.UI.Msgbox("Inventory Parts loaded successfully")
+	gui.Form..Visible(true)
+
+	F.Intrinsic.UI.CloseWaitDialog 
+F.Intrinsic.Control.EndIf	
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdCreate_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdCreate_Click.End
+
+Program.Sub.cmdFileOK_Click.Start
+F.Intrinsic.Control.SetErrorHandler("createdatatable_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.i.Declare(long)
+V.Local.iRows.Declare(long)
+V.Local.sRow.Declare(String)
+V.Local.iUB.Declare(long,-1)
+V.Local.sRet.Declare(String)
+V.Local.sTypes.Declare(String)
+V.Local.sFieldNames.Declare(String)
+V.Local.sData.Declare(String)
+V.Local.sTempRows.Declare(String)
+
+F.Intrinsic.UI.InvokeWaitDialog("Reading Spreadsheet")
+V.Local.sRet.Set(V.Screen.SS_Form_File!txt_FileSelection.Text)
+
+'-----------------------------------------------------
+'Reading from CSV
+F.Intrinsic.File.File2String(V.Local.sRet,V.Local.sRow)
+'-----------------------------------------------
+'F.Intrinsic.String.Split(V.Local.sRow,V.Ambient.NewLine,V.Local.sTempRows)
+'F.Intrinsic.Variable.PopArray(V.Local.sTempRows,V.Local.sTempRows)
+'F.Intrinsic.String.Join(V.Local.sTempRows,V.Ambient.NewLine,V.Local.sRow)
+
+V.Local.sFieldNames.Set("GSS_LEVEL*!*GSS_PART_NUMBER*!*GSS_QTY*!*GSS_DESCRIPTION*!*GSS_REVISION*!*GSS_UOM*!*GSS_Category*!*GSS_Source*!*GSS_VendorCode*!*GSS_ProductLine*!*GSS_Bin*!*GSS_PurchaseUM*!*GSS_MFGPartNo*!*GSS_MFGName*!*GSS_Cost*!*GSS_Parent*!*GSS_Status")
+V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String")
+'-------------------------------------------------------------
+'Reading from CSV
+F.Data.DataTable.CreateFromString("Import1",V.Local.sRow,V.Local.sFieldNames,V.Local.sTypes,",",v.Ambient.NewLine ,True)
+'delete first row - Title
+Function.Data.DataTable.DeleteRow("Import1", v.dataTable.Import1.RowCount--)
+'----------------------------------------------	
+'added new column to allow duplicate partno in dictionary
+Function.Data.DataTable.AddExpressionColumn("Import1", "ParentLevel", "string","GSS_PART_NUMBER + '@' + GSS_LEVEL")
+F.Data.DataTable.AddColumn("Import1","NewPart","Boolean")
+
+gui.SS_Form_File..Visible(false)
+
+f.Intrinsic.Control.CallSub(Loadscreen)
+f.Intrinsic.Control.CallSub(AssignParent)
+f.Intrinsic.Control.CallSub(explodebom)
+f.Intrinsic.Control.CallSub(Compare)
+
+gui.Form..Visible(true)
+
+f.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("createdatatable_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.UI.CloseWaitDialog
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdFileOK_Click.End
+
+Program.Sub.ExplodeBOM.Start
+F.Intrinsic.Control.SetErrorHandler("ExplodeBOM_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.ssql.Declare(string)
+v.Local.i.Declare(long)
+v.Local.sparentpart.Declare(string)
+v.Local.sdesc.Declare(string)
+v.Local.srev.Declare(String)
+v.Local.sbominfosql.Declare(string)
+v.Local.spart.Declare(String)
+v.Local.sparentpN.Declare(String)
+v.Local.sparentrev.Declare(string)
+V.Local.sHold.Declare(String)
+V.Local.sBOM.Declare(String)
+V.Local.sFilePath.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sRet.Declare(String)
+V.Local.iFor.Declare(Long)
+V.Local.iRow.Declare(Long)
+v.Local.icount.Declare(long)
+v.Local.sfieldnames.Declare(string)
+v.Local.stypes.Declare(string)
+v.Local.sreturn.Declare(string)
+v.Local.icount.Set(0)
+v.Local.itest.Declare(long,0)
+v.Local.iQty.Declare(long,1)
+v.Local.lastseq.Declare(string)
+v.Local.lastseqqty.Declare(long)
+v.Local.topseqqty.Declare(long)
+V.Local.sRetVar.Declare(string)
+V.Local.sValues.Declare(string)
+V.Local.sSource.Declare(string)
+V.Local.sTempPart.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sQty.Declare(String)
+
+'display status
+F.Intrinsic.UI.ChangeWaitStatus("Getting GSS BOM Data")
+
+v.Local.sparentpart.Set(v.Global.sParent)
+
+'check to see if that BOM already exists if so populate the second grid
+f.Intrinsic.String.Build("Select * from V_BOM_MSTR where PARENT = '{0}'",v.Local.sparentpart.Trim,v.Local.ssql)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+	F.ODBC.con!rst.Close
+	gui.Form.frame2.visible(false)
+	V.Global.bExist.Set(false)
+	f.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rst.Close
+'
+
+gui.Form.frame2.visible(true)
+V.Global.bExist.Set(True)
+
+V.Local.sFieldNames.Set("Line*!*Seq*!*Part*!*Description*!*Cat*!*Source*!*Count*!*OnHand*!*OnOrder*!*Required*!*Net*!*RtrNet*!*Parent*!*ldHrs*!*LdDate*!*filler*!*UM*!*GSS_EXTRA_DESC")
+V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String")
+
+F.Intrinsic.String.Build("{0}\BOM{1}",V.System.Temp,V.Caller.Terminal,V.Local.sFilePath)
+F.Intrinsic.String.Build("0{0}{1}{0}{2}",V.Ambient.Tab,V.Local.sparentpart.Trim,v.Local.sFilePath,V.Local.sParams)
+F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sParams)
+F.Global.General.CallWrapperSync(410000,V.Local.sFilePath)
+
+F.Intrinsic.File.Exists(V.Local.sFilePath,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.FiletoStringArray(V.Local.sFilePath,V.Ambient.Tab,V.Local.sRet)
+V.Local.sRet.RedimPreserve(0,3)
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sRet(3),V.Local.sFile.Trim)
+F.Intrinsic.String.Split(V.Local.sFile," ",V.Local.sFile)
+F.Intrinsic.String.Build("{0}\{1}",V.System.Temp,V.Local.sFile(0).Trim,V.Local.sFilePath)
+F.Intrinsic.File.Exists(V.Local.sFilePath,V.Local.bExists)
+
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'load it to a string
+F.Intrinsic.File.File2String(V.Local.sFilePath,V.Local.sRet)
+f.Intrinsic.String.Replace(v.Local.sRet,"*","",v.Local.sRet)
+
+F.Intrinsic.Control.If(v.DataTable.GRID2.Exists,=,True)
+	Function.Data.DataView.Close("GRID2", "GRID2")
+	F.Data.DataTable.Close("GRID2")
+Function.Intrinsic.Control.EndIf
+
+F.Data.DataTable.CreateFromString("GRID2",V.Local.sret,V.Local.sFieldNames,V.Local.sTypes,"|~|",v.ambient.newline,True)
+Function.Data.DataTable.DeleteRow("GRID2", v.dataTable.GRID2.RowCount--)
+
+''Convert longparts and update Source
+F.Intrinsic.Control.For(v.Local.iFor,7,v.dataTable.GRID2.RowCount--,1)
+	'Clear out TempPart
+	V.Local.sTempPart.Redim(-1,-1)
+	F.Intrinsic.String.Split(v.datatable.GRID2(v.Local.iFor).PART.FieldValTrim,"Rev: ",V.Local.sTempPart)
+	'Redim in case there is no Rev
+	V.Local.sTempPart.RedimPreserve(0,1)
+	Function.Global.Inventory.GetGSSPart(V.Local.sTempPart(0),V.Local.sTempPart(1),V.Local.sParam)
+	F.Data.DataTable.SetValue("GRID2",V.Local.iFor,"PART",V.Local.sParam)
+	
+	'We need to do the same thing for the Parent
+	F.Intrinsic.String.Split(V.DataTable.Grid2(V.Local.iFor).PARENT.FieldValTrim,"Rev: ",V.Local.sTempPart)
+	V.Local.sTempPart.RedimPreserve(0,1)
+	F.Global.Inventory.GetGSSPart(V.Local.sTempPart(0),V.Local.sTempPart(1),V.Local.sParam)
+	F.Data.DataTable.SetValue("GRID2",V.Local.iFor,"PARENT",V.Local.sParam)
+	
+	'if MJ cahnge to F
+	V.Local.sSource.Set(v.datatable.GRID2(v.Local.iFor).Source.FieldValTrim)
+	f.Intrinsic.Control.If(V.Local.sSource,=,"MJ")
+		V.Local.sSource.Set("F")
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Left(v.datatable.GRID2(v.Local.iFor).Source.FieldValTrim,1,V.Local.sSource)
+	Function.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.SetValue("GRID2",V.Local.iFor,"Source",V.Local.sSource)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+f.Data.dataview.create("GRID2","GRID2")
+Gui.Form.GsGridControlMatch.AddGridViewFromDataView("GRID2","GRID2","GRID2")
+
+Function.Data.Dictionary.CreateFromDataTable("Qty_Dict", "GRID2", "Part","Count",4)
+Function.Data.Dictionary.SetDefaultReturn("Qty_Dict","***NONE***")
+
+'
+'loop through the datatable
+'F.Intrinsic.Control.For(v.Local.i,0,v.dataTable.GRID2.RowCount--,1)
+F.Intrinsic.Control.For(v.Local.i,7,v.dataTable.GRID2.RowCount--,1)
+	F.Intrinsic.String.Build("select UM_Inventory from V_BOM_Mstr where Parent = '{0}' and Part = '{1}' and UM_Inventory <> ''",v.datatable.GRID2(v.Local.i).PARENT.fieldval,v.datatable.GRID2(v.Local.i).PART.fieldval,V.Local.sSQL)
+	F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL,V.Local.sReturn)
+	F.Data.DataTable.SetValue("GRID2",V.Local.i,"UM",v.Local.sreturn)
+	
+	V.Local.sRetVar.Set(v.datatable.GRID2(v.Local.i).PARENT.fieldval)
+	V.Local.sValues.Set(Variable.Dictionary.Qty_Dict![V.Local.sRetVar])
+
+	f.Intrinsic.Control.If(V.Local.sValues,<>,"***NONE***")
+		f.Intrinsic.Math.Div(v.datatable.GRID2(v.Local.i).Count.fieldval,v.Local.sValues.Long,v.Local.iQty)
+		F.Data.DataTable.SetValue("GRID2",V.Local.i,"Count",v.Local.iQty)
+	f.Intrinsic.Control.endif
+	
+	F.Intrinsic.String.Format(V.DataTable.GRID2(V.Local.i).Count.fieldvaltrim,"####.0000",V.Local.sQty)
+	F.Data.DataTable.SetValue("GRID2",V.Local.i,"Count",V.Local.sqty)	
+	
+f.Intrinsic.Control.Next(v.Local.i)
+F.Data.Dictionary.Close("Qty_Dict")
+
+F.Data.DataTable.SetValue("GRID2",7,"UM","EA")
+
+'hide the rows that are created from the exploded bom in the data view
+gui.Form.GsGridControlMatch.HideRow("GRID2",0,True)
+gui.Form.GsGridControlMatch.HideRow("GRID2",1,True)
+gui.Form.GsGridControlMatch.HideRow("GRID2",2,True)
+gui.Form.GsGridControlMatch.HideRow("GRID2",3,True)
+gui.Form.GsGridControlMatch.HideRow("GRID2",4,True)
+gui.Form.GsGridControlMatch.HideRow("GRID2",5,True)
+gui.Form.GsGridControlMatch.HideRow("GRID2",6,True)
+'gui.Form.GsGridControlMatch.HideRow("GRID2",7,True)
+
+'"Line*!*Seq*!*Part*!*Description*!*UM*!*Cat*!*Source*!*Parent*!*OnHand*!*OnOrder*!*Required*!*Net*!*RtrNet*!*Count*!*ldHrs*!*LdDate*!*filler*!*GSS_EXTRA_DESC")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Seq","Caption","Lvl")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Seq","MaxWidth","40")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Seq","visible",True)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Line","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Part","Caption","Part and Rev")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Part","MaxWidth","150")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Part","Width","150")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","UM","Caption","UM")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","UM","MaxWidth","40")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","UM","Width","40")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","OnHand","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","OnOrder","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Required","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Net","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","RtrNet","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","ldHrs","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","ldDate","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Filler","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Parent","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Seq","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","GSS_EXTRA_DESC","visible",False)
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Source","Caption","Source")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Source","MaxWidth","50")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Cat","Caption","Category")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Cat","MaxWidth","40")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Description","MaxWidth","250")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Description","Width","220")
+
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Count","Caption","Qty")
+gui.Form.GsGridControlMatch.setcolumnproperty("GRID2","Count","MaxWidth","50")
+gui.Form.GsGridControlMatch.SetColumnProperty("GRID2","UM","VisibleIndex","3")
+gui.Form.GsGridControlMatch.SetColumnProperty("GRID2","Count","VisibleIndex","5")
+gui.Form.GsGridControlMatch.setgridviewproperty("GRID2","Editable",False)
+gui.Form.GsGridControlMatch.mainview("GRID2")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ExplodeBOM_Err")
+
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	
+	f.Intrinsic.UI.CloseWaitDialog
+Function.Intrinsic.Control.EndIf
+Program.Sub.ExplodeBOM.End
+
+Program.Sub.Loadscreen.Start
+F.Intrinsic.Control.SetErrorHandler("Loadscreen_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iFor.Declare(long)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sPartdesc.Declare(String)
+
+F.Intrinsic.UI.ChangeWaitStatus("Getting Display Ready")
+
+'Format partdesc
+F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+	V.Local.sPartdesc.Set(v.datatable.IMPORT1(v.Local.iFor).GSS_DESCRIPTION.FieldValTrim)
+	f.Intrinsic.String.Replace(V.Local.sPartdesc,"""","^",V.Local.sPartdesc)
+	f.Intrinsic.String.Replace(V.Local.sPartdesc,v.Ambient.DblQuote,"",V.Local.sPartdesc)
+	f.Intrinsic.String.Replace(V.Local.sPartdesc,"^",v.Ambient.DblQuote,V.Local.sPartdesc)
+	F.Data.DataTable.SetValue("IMPORT1",V.Local.iFor,"GSS_DESCRIPTION",V.Local.sPartdesc)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+'create the dataview
+f.data.dataview.create("Import1","GRID1")
+
+'hide some columns and format others
+Gui.Form.GsGridControlImport.AddGridViewFromDataView("GRID1","Import1","GRID1")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_LEVEL","MaxWidth","80")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_LEVEL","Caption","Lvl")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_DESCRIPTION","MaxWidth","300")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_DESCRIPTION","Width","300")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_DESCRIPTION","Caption","Description")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_UOM","Caption","UM")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_UOM","MaxWidth","40")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_Category","Caption","Category")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_Source","Caption","Source")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_Source","MaxWidth","40")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_REVISION","Caption","Rev")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_PART_NUMBER","Caption","Part")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_PART_NUMBER","MaxWidth","150")
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_PART_NUMBER","Width","150")
+
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_Parent","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_VendorCode","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_ProductLine","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_PurchaseUM","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_Bin","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_MFGPartNo","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_MFGName","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_Cost","visible",False)
+gui.Form.GsGridControlImport.SetColumnProperty("GRID1","NewPart","visible",False)
+gui.Form.GsGridControlImport.setcolumnproperty("GRID1","GSS_QTY","Caption","Qty")
+
+gui.Form.GsGridControlImport.setGridviewProperty("GRID1","Editable",False)
+gui.Form.GsGridControlImport.mainview("GRID1")	
+gui.Form.GsGridControlImport.HideRow("GRID1",0,True)
+
+''Convert longparts
+F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+	Function.Global.Inventory.GetGSSPart(v.datatable.IMPORT1(v.Local.iFor).GSS_PART_NUMBER.FieldValTrim,v.datatable.IMPORT1(v.Local.iFor).GSS_REVISION.FieldValTrim,V.Local.sParam)
+
+	f.Intrinsic.String.Left(V.Local.sParam,17,V.Local.sPart)
+	f.Intrinsic.String.Right(V.Local.sParam,3,V.Local.sRev)
+	
+	F.Data.DataTable.SetValue("IMPORT1",V.Local.iFor,"GSS_REVISION",V.Local.sRev)
+
+	F.Intrinsic.String.GSSPartString(V.Local.sPart,V.Local.sRev,V.Local.sPart)
+	F.Data.DataTable.SetValue("IMPORT1",V.Local.iFor,"GSS_PART_NUMBER",V.Local.sPart)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+v.Local.iFor.Set(1)
+'Parent Part
+
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_PART_NUMBER.fieldval," ",17,V.Local.sPart)
+F.Intrinsic.String.Left(V.Local.sPart,17,V.Local.sPart)
+
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_REVISION.fieldval," ",3,V.Local.sRev)
+F.Intrinsic.String.Left(V.Local.sRev,3,V.Local.sRev)
+
+F.Intrinsic.String.GSSPartString(V.Local.sPart,V.Local.sRev,V.Global.sParent)
+V.Global.sParent.Set(v.datatable.IMPORT1(v.Local.iFor).GSS_PART_NUMBER.fieldval)
+
+'set the part rev and desc
+gui.Form.txtDesc1.Text(v.datatable.Import1(v.Local.iFor).GSS_DESCRIPTION.fieldvaltrim)
+gui.Form.txtPN1.Text(V.Local.sPart)
+gui.Form.txtRev1.Text(V.Local.sRev)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Loadscreen_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.UI.CloseWaitDialog
+Function.Intrinsic.Control.EndIf
+Program.Sub.Loadscreen.End
+
+Program.Sub.Compare.Start
+F.Intrinsic.Control.SetErrorHandler("Compare_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iFor.Declare(long)
+V.Local.sBOMFile.Declare(String)
+V.Local.sBOMText.Declare(String)
+V.Local.sparam.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.local.bPhantom.Declare(Boolean)
+
+Function.Global.General.ReadOption(400005, False, False, V.local.bPhantom) 
+
+'reset GSS_Status
+F.Data.DataTable.SetValue("IMPORT1",-1,"GSS_Status","")
+
+F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+	F.Intrinsic.Control.CallSub(Buildcomponenetstring,"FOR",V.Local.iFor,"Phantom",V.local.bPhantom)
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sBomText,V.Args.LINE,V.Ambient.NewLine,V.Local.sBOMText)
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.String.Build("{0}\{1}",V.Caller.FilesDir,"BOMC.txt",V.Local.sBOMFile)
+F.Intrinsic.File.String2File(V.Local.sBOMFile,V.Local.sBOMText)
+	
+'option to create parts
+Function.Intrinsic.Control.If(V.Global.bPartBatch,=,True)
+	gui.Form.cmdCreate.Enabled(True)
+f.Intrinsic.Control.Else
+	gui.Form.cmdCreate.Enabled(False)
+F.Intrinsic.Control.EndIf	
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Compare_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.UI.CloseWaitDialog
+Function.Intrinsic.Control.EndIf
+Program.Sub.Compare.End
+
+Program.Sub.Buildcomponenetstring.Start
+F.Intrinsic.Control.SetErrorHandler("Buildcomponenetstring_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sLine.Declare(String)
+V.Local.sParent.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sSeq.Declare(String)
+V.Local.sDescription.Declare(String)
+V.Local.sCount.Declare(String)
+V.Local.sUM.Declare(String)
+V.Local.sCategory.Declare(String)
+V.Local.sSource.Declare(String)
+V.Local.sMisc.Declare(String)
+V.Local.iFor.Declare(Long)
+V.Local.i7.Declare(Long)
+V.Local.sRev.Declare(String)
+V.Local.schild.Declare(String)
+V.Local.sqty.Declare(String)
+V.Local.spno.Declare(String)
+V.Local.suom.Declare(String)
+V.Local.sDesc.Declare(String)
+V.Local.spad.Declare(String)
+V.Local.spad1.Declare(String)
+V.Local.spad2.Declare(String)
+V.Local.spad3.Declare(String)
+V.Local.sRMLine.Declare(String)
+V.Local.sRMParent.Declare(String)
+v.Local.ssql.Declare(String)
+V.Local.sVendcode.Declare(String)
+v.Local.sPL.Declare(string)
+V.Local.sTempCategory.Declare(String)
+
+V.Local.iFor.Set(V.Args.FOR)
+
+'add 6 to the counter to account for the rows not shown in the datagrid
+f.Intrinsic.Math.Add(V.Local.iFor,6,V.Local.i7)
+
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_PART_NUMBER.fieldval," ",17,V.Local.sPart)
+F.Intrinsic.String.Left(V.Local.sPart,17,V.Local.sPart)
+
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_REVISION.fieldval," ",3,V.Local.sRev)
+F.Intrinsic.String.Left(V.Local.sRev,3,V.Local.sRev)
+	
+'put the part and rev together
+F.Intrinsic.String.GSSPartString(V.Local.sPart,V.Local.sRev,V.Local.sPart)
+
+V.Local.sPart.Set(v.datatable.IMPORT1(v.Local.iFor).GSS_PART_NUMBER.fieldval)
+
+'------------------
+Function.Intrinsic.String.Format(V.datatable.IMPORT1(v.Local.iFor).GSS_Qty.fieldvaltrim,"####.0000", variable.local.sqty)
+F.Data.DataTable.SetValue("Import1",V.Local.iFor,"GSS_Qty",V.Local.sqty)
+F.Intrinsic.String.LPad(variable.local.sqty,"0",16,V.Local.sqty)
+'-----------------------------
+
+' make sure UM is just 2 char
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_UOM.fieldvaltrim," ",2,V.Local.sUM)
+F.Intrinsic.String.Left(V.Local.sUM,2,V.Local.sUM)
+
+' description will be "UPLOADED, but padded to 30 char
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_Description.fieldvaltrim," ",30,V.Local.sdesc)
+F.Intrinsic.String.Left(V.Local.sdesc,30,V.Local.sdesc)
+
+F.Intrinsic.String.RPad(V.Local.spad1," ",60,V.Local.spad1)
+
+
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_VendorCode.fieldvaltrim," ",6,V.Local.sVendcode)
+F.Intrinsic.String.Left(V.Local.sVendcode,6,V.Local.sVendcode)
+
+F.Intrinsic.String.RPad(V.Local.spad2," ",47,V.Local.spad2)
+
+' make sure Category is 1 char
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_Category.fieldvaltrim," ",1,V.Local.sCategory)
+F.Intrinsic.String.Left(V.Local.sCategory,1,V.Local.sCategory)
+
+'If the Category is normal then it needs to be blank
+F.Intrinsic.Control.If(V.Local.sCategory.UCase,=,"N")
+	V.Local.sCategory.Set(" ")
+F.Intrinsic.Control.EndIf
+
+' make sure Source is 1 char
+F.Intrinsic.String.RPad(v.datatable.IMPORT1(v.Local.iFor).GSS_Source.fieldvaltrim," ",1,V.Local.sSource)
+F.Intrinsic.String.Left(V.Local.sSource,1,V.Local.sSource)
+
+F.Intrinsic.String.RPad(V.Local.spad3," ",63,V.Local.spad3)
+
+V.Local.sTempCategory.Set(v.datatable.IMPORT1(v.Local.iFor).GSS_Category.fieldvaltrim)
+	
+F.Intrinsic.Control.If(V.args.Phantom,=,True,"AND",V.Local.sTempCategory.UCase,=,"PHT")
+	'dont create parts for phantom parts
+f.Intrinsic.Control.Else 
+	'query to see if that part is in inventory
+	f.Intrinsic.String.Build("Select PART from V_INVENTORY_MSTR where PART = '{0}'",v.Local.spart,v.Local.ssql)
+	F.ODBC.Connection!con.openrecordsetro("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		'if Part Doesn't Exist Add Part to Batch then use the information from the CSV.		
+		f.Intrinsic.String.LPad(v.datatable.IMPORT1(v.Local.iFor).GSS_ProductLine.fieldval,"0",2,v.Local.sPL)
+	
+'not updating cost
+		F.Global.Inventory.AddPartToBatch(v.Local.spart,v.Local.sUM,v.Local.sdesc,"",v.Local.sPL,v.Local.sSource,"","","","NOMAINT")
+		F.Data.DataTable.SetValue("IMPORT1",V.Local.iFor,"NewPart",True)
+		
+		
+		'Parent not in GSS
+		f.Intrinsic.Control.If(V.Global.bExist,=,True)
+			gui.Form.GsGridControlMatch.SetRowAppearance("GRID2",v.Local.i7,"backcolor","yellow")
+		f.Intrinsic.Control.endif
+	
+		Gui.Form.GsGridControlImport.SetRowAppearance("GRID1",v.Local.iFor, "backcolor", "yellow")
+		V.Global.bPartBatch.Set(True)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(V.Global.bExist,=,True)
+	f.Intrinsic.Control.If(v.Local.sPart.Trim,<>,v.DataTable.GRID2(v.Local.i7).Part.fieldvaltrim)
+		gui.Form.GsGridControlImport.SetcellAppearance("GRID1",1,v.Local.iFor,"backcolor","red")
+	f.Intrinsic.Control.EndIf
+	
+	'check the UM
+	f.Intrinsic.Control.If(v.Local.sUM.Trim,<>,v.DataTable.GRID2(v.Local.i7).UM.fieldvaltrim)
+		gui.Form.GsGridControlImport.SetcellAppearance("GRID1",5,v.Local.iFor,"backcolor","red")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Local.sdesc.Trim,<>,v.DataTable.GRID2(v.Local.i7).Description.fieldvaltrim)
+		gui.Form.GsGridControlImport.SetcellAppearance("GRID1",3,v.Local.iFor,"backcolor","red")
+	f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.If(v.Local.sqty.Long,<>,v.DataTable.GRID2(v.Local.i7).Count.fieldvalLong)
+		gui.Form.GsGridControlImport.SetcellAppearance("GRID1",2,v.Local.iFor,"backcolor","red")
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+v.Local.sFilter.Declare(string)
+
+f.Intrinsic.String.Build("GSS_PART_NUMBER = '{0}' and GSS_Parent = '{1}' and GSS_Status = 'Y' " ,v.datatable.IMPORT1(v.Local.iFor).GSS_PART_NUMBER.fieldval,v.datatable.IMPORT1(v.Local.iFor).GSS_Parent.fieldval,V.Local.sFilter)
+F.Data.DataView.Create("IMPORT1","StatusView",22, v.Local.sFilter,"")
+
+'filter duplicate
+f.Intrinsic.Control.If(v.dataview.IMPORT1!StatusView.rowcount,=,0)
+	F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}",v.datatable.IMPORT1(v.Local.iFor).GSS_Parent.fieldval,V.Local.spart,V.local.sqty,V.Local.sUM,V.local.sDesc,V.Local.sPad1,V.local.sVendcode,V.Local.sPad2,V.Local.sCategory,V.Local.sSource,V.Local.sPad3,V.Local.sLine)	
+	F.Data.DataTable.SetValue("IMPORT1",v.Local.iFor,"GSS_Status","Y")
+F.Intrinsic.Control.EndIf
+
+f.Data.DataView.Close("IMPORT1","StatusView")
+
+F.Intrinsic.Variable.AddRV("LINE",V.Local.sLine)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Buildcomponenetstring_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.UI.CloseWaitDialog
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Buildcomponenetstring.End
+
+Program.Sub.cmdRefresh_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+	gui.SS_Form_File..Visible(false)
+	f.Intrinsic.Control.CallSub(Compare)
+	gui.Form..Visible(true)
+	gui.Form.cmdRefresh.Enabled(false)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.ConvertLongParts.Start
+F.Intrinsic.Control.SetErrorHandler("GetLongParts_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iLen.Declare(long)
+V.Local.sDisplayPart.Declare(String)
+V.Local.sDisplayRev.Declare(String)
+V.Local.bExist.Declare(boolean)
+V.Local.sQuery.Declare(String)
+V.Local.sHold.Declare(String)
+V.Local.blopart.Declare(boolean)
+
+'' === check part and rev length ==
+F.Intrinsic.String.Len(v.Args.LongParts,V.Local.iLen)
+F.Intrinsic.Control.If(V.Local.iLen,>,17)
+	V.Local.blopart.set(True)
+'	f.Intrinsic.String.Build("SELECT DISPLAY_PART, DISPLAY_REV  FROM  INV_LXR WHERE GSS_PART = '{0}'",v.Args.part,V.Local.sQuery)
+	f.Intrinsic.String.Build("SELECT GSS_PART  FROM  INV_LXR WHERE DISPLAY_PART = '{0}' and DISPLAY_REV = '{1}'",v.Args.LongParts,v.Args.LongRev,V.Local.sQuery)
+	F.ODBC.Connection!con.OpenRecordsetRO("rstINVLXR",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.con!rstINVLXR.EOF,<>,True)
+		F.Intrinsic.String.Split(V.ODBC.con!rstINVLXR.FieldVal!GSS_PART,"||",V.Local.sHold)
+		V.Local.sDisplayPart.Set(V.Local.sHold(0))
+		V.Local.sDisplayRev.Set(V.Local.sHold(1))	
+		V.Local.bExist.Set(True)	
+	F.Intrinsic.Control.Else
+		V.Local.sDisplayPart.Set(V.Args.LongParts)
+		V.Local.sDisplayRev.Set(V.Args.LongRev)
+		V.Local.bExist.Set(False)	
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rstINVLXR.Close
+f.Intrinsic.Control.Else
+	V.Local.blopart.set(False)
+	V.Local.sDisplayPart.Set(v.Args.LongParts)
+	V.Local.sDisplayRev.Set(v.Args.LongRev)
+	F.Intrinsic.String.RPad(V.Local.sDisplayPart," ",17,V.Local.sDisplayPart)
+	F.Intrinsic.String.Left(V.Local.sDisplayPart,17,V.Local.sDisplayPart)
+	F.Intrinsic.String.RPad(v.Args.sDisplayRev," ",3,V.Local.sDisplayRev)
+	F.Intrinsic.String.Left(V.Local.sDisplayRev,3,V.Local.sDisplayRev)
+	'put the part and rev together
+	F.Intrinsic.String.GSSPartString(V.Local.sDisplayPart,V.Local.sDisplayRev,V.Local.sDisplayPart)
+	'query to see if that part is in inventory
+	f.Intrinsic.String.Build("Select PART from V_INVENTORY_MSTR where PART = '{0}'",v.Local.sDisplayPart,v.Local.sQuery)
+	F.ODBC.Connection!con.openrecordsetro("rst",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		V.Local.bExist.Set(False)
+	f.Intrinsic.Control.else
+		V.Local.bExist.Set(True)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Variable.AddRV("Parts",V.Local.sDisplayPart,"Rev",V.Local.sDisplayRev,"PartExist",V.Local.bExist,"LongPart",V.Local.blopart)	
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetLongParts_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.GetLongParts.End
+
+Program.Sub.AssignParent.Start
+F.Intrinsic.Control.SetErrorHandler("AssignParent_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sLevel.Declare(string)
+
+V.Local.sError.Declare(String)
+V.Local.iFor.Declare(string)
+variable.local.retVal.Declare(long)
+variable.local.lLen.Declare(long)
+variable.local.lLenExtract.Declare(long)
+V.Local.sRetVar.Declare(String)
+V.Local.sSql.Declare(String)
+
+'scan level
+'Returns Variable.Local.retVal=10
+'find the dot position from left of the string = a
+'a-1 = c
+'left c for the string that will be the parent
+Function.Data.Dictionary.CreateFromDataTable("Level_Dict", "Import1", "ParentLevel","GSS_LEVEL",4)
+Function.Data.Dictionary.SetDefaultReturn("Level_Dict","0")
+
+F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+	V.Local.sLevel.Set(V.datatable.IMPORT1(v.Local.iFor).GSS_LEVEL.fieldvaltrim)
+	Function.Intrinsic.String.InstrRev(V.Local.sLevel,".",variable.local.retVal)
+	f.Intrinsic.Math.Sub(variable.local.retVal,1,variable.local.lLenExtract)
+	f.Intrinsic.String.left(V.Local.sLevel,variable.local.lLenExtract,V.Local.sRetVar)
+	Function.Data.Dictionary.ReturnKeyFromValue("Level_Dict",V.Local.sRetVar,V.Local.sRetVar)
+	'split @ to get partno
+	f.Intrinsic.String.Split(V.Local.sRetVar,"@",V.Local.sRetVar)
+	F.Data.DataTable.SetValue("Import1",v.Local.iFor,"GSS_PARENT",V.Local.sRetVar(0))
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Data.Dictionary.Close("Level_Dict")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("AssignParent_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.AssignParent.End
+
+Program.Sub.UpdateINV.Start
+F.Intrinsic.Control.SetErrorHandler("UpdateINV_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iFor.Declare(long)
+V.Local.sSQL.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.Local.sVenCode.Declare(String)
+V.Local.sMFGPART.Declare(String)
+
+'GSS_PART_NUMBER  GSS_VendorCode  GSS_PurchaseUM  GSS_MFGPartNo GSS_MFGName GSS_Bin 
+F.Intrinsic.Control.For(v.Local.iFor,1,v.dataTable.Import1.RowCount--,1)
+	F.Intrinsic.Control.If(V.DataTable.IMPORT1(V.Local.iFor).NewPart.Fieldval,=,True)
+		V.Local.sVenCode.Set(V.datatable.IMPORT1(v.Local.iFor).GSS_VendorCode.fieldvaltrim)
+		V.Local.sMFGPART.Set(V.datatable.IMPORT1(v.Local.iFor).GSS_MFGPartNo.fieldvaltrim)
+	
+		'If the manufacture part is too long need to update it to signify it's in extra text. Customer will add it manually
+		F.Intrinsic.Control.If(V.Local.sMFGPART.Length,>,23)
+			V.Local.sMFGPART.Set("SEE PART EXTRA TEXT")
+		F.Intrinsic.Control.EndIf
+	
+		V.Local.sPart.set(V.datatable.Import1(v.Local.iFor).GSS_PART_NUMBER.fieldval)
+	
+		f.Intrinsic.String.Build("update INVENTORY_MST2 set Name_Vendor = '{0}'  where part = '{1}'",V.Local.sVenCode,V.Local.sPart,V.Local.sSQL)
+		f.ODBC.Connection!con.Execute(V.Local.sSQL)
+		f.Intrinsic.String.Build("update INVENTORY_MSTR set UM_Purchasing = '{0}',BIN  = '{1}' where part = '{2}'",V.datatable.IMPORT1(v.Local.iFor).GSS_PurchaseUM.fieldvaltrim,V.datatable.IMPORT1(v.Local.iFor).GSS_Bin.fieldvaltrim,V.Local.sPart,V.Local.sSQL)
+		f.ODBC.Connection!con.Execute(V.Local.sSQL)
+	
+		f.Intrinsic.String.Build("Select *  from INV_CROSS_REF where PART = '{0}' and MFG_PART = '{1}'",V.Local.sPart,V.Local.sMFGPART,v.Local.sSQL)
+		F.ODBC.Connection!con.openlocalrecordsetrw("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+			f.ODBC.con!rst.AddNew
+			F.ODBC.con!rst.Set!Part(V.Local.sPart) 
+			F.ODBC.con!rst.Set!Vendor(V.datatable.IMPORT1(v.Local.iFor).GSS_VendorCode.fieldvaltrim)
+			F.ODBC.con!rst.Set!MFG_PART(V.Local.sMFGPART)
+			F.ODBC.con!rst.Set!MFG_NAME(V.datatable.IMPORT1(v.Local.iFor).GSS_MFGName.fieldvaltrim)
+			F.ODBC.con!rst.Set!Status("Y")
+			f.ODBC.con!rst.Update
+		f.Intrinsic.Control.EndIf 
+		f.ODBC.con!rst.Close 
+		
+		f.Intrinsic.Control.If(V.datatable.Import1(v.Local.iFor).GSS_Cost.fieldvalfloat,>,0)
+			f.Intrinsic.String.Build("Select *  from INVENTORY_COST where PART = '{0}' ",V.Local.sPart,v.Local.sSQL)
+			F.ODBC.Connection!con.openlocalrecordsetrw("rst",V.Local.sSQL)
+			
+			F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+				f.ODBC.con!rst.AddNew
+				F.ODBC.con!rst.Set!Part(V.Local.sPart) 
+			f.Intrinsic.Control.EndIf 
+			
+			F.ODBC.con!rst.Set!Cost(V.datatable.Import1(v.Local.iFor).GSS_Cost.fieldvalfloat)
+			F.ODBC.con!rst.Set!Matl(V.datatable.Import1(v.Local.iFor).GSS_Cost.fieldvalfloat)
+			f.ODBC.con!rst.Update
+			f.ODBC.con!rst.Close
+			
+			F.Intrinsic.String.Build("UPDATE INVENTORY_MSTR SET AMT_COST = '{0}',  AMT_ALT_COST = '{0}' WHERE PART = '{1}'",V.DataTable.Import1(V.Local.iFor).GSS_Cost.FieldValFloat,V.Local.sPart,V.Local.sSQL)
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		f.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf 	
+F.Intrinsic.Control.Next(V.Local.iFor)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("UpdateINV_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4237_BOMExport.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.UpdateINV.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_4237_BOMImport.g2u$}$RAN$}$11/20/2016 9:07:38 AM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Upload BOM from SpreadSheet
+Program.Sub.Comments.End
+
